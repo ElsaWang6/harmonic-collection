@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('night.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            color: rgb(255, 209, 233);
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .square {
+            position: absolute;
+            background-color: rgb(255, 247, 204);
+            opacity: 0.3;
+            animation: flicker 3s infinite ease-in-out;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.9; }
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            text-align: center;
+            color: rgb(255, 213, 238);
+            font-family: 'Charmonman', sans-serif;
+            transition: transform 0.5s ease;
+        }
+        .text:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        .square:nth-child(1) {
+            width: 50px;
+            height: 50px;
+            top: 10%;
+            left: 20%;
+            animation-duration: 2s;
+        }
+
+        .square:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            left: 40%;
+            animation-duration: 3.5s;
+        }
+
+        .square:nth-child(3) {
+            width: 75px;
+            height: 75px;
+            top: 60%;
+            left: 15%;
+            animation-duration: 2.8s;
+        }
+
+        .square:nth-child(4) {
+            width: 120px;
+            height: 120px;
+            top: 50%;
+            left: 70%;
+            animation-duration: 4s;
+        }
+
+        .square:nth-child(5) {
+            width: 90px;
+            height: 90px;
+            top: 80%;
+            left: 50%;
+            animation-duration: 2.2s;
+        }
+
+        .square:nth-child(6) {
+            width: 50px;
+            height: 50px;
+            top: 20%;
+            left: 90%;
+            animation-duration: 2.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="text">Tell me about your dream</div>
+    </div>
+</body>
+</html>
