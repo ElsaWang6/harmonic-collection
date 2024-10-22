@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Knit</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            background: radial-gradient(circle at 20% 30%, rgba(255, 255, 0, 0.3), transparent 30%),
+                        radial-gradient(circle at 70% 80%, rgba(0, 0, 255, 0.3), transparent 40%),
+                        radial-gradient(circle at 40% 70%, rgba(255, 255, 0, 0.2), transparent 50%);
+            height: 300vh;
+            max-width: 1200px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: #19ffec;
+            font-size: 60px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: "Dimsum Week", serif;
+            letter-spacing: 6px;
+            top: 45px;
+            left: 35%;
+            position: absolute;
+            z-index:10;
+            transition: color 0.3s ease;
+        }
+        h1:hover {
+            color: #ff5733;
+        }
+        .introduction {
+            margin-top: -1600px;
+            margin-right:100px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #e0c1fb;
+            width: 600px;
+            line-height: 1.6;
+            font-family: "Dimsum Week", serif;
+            z-index: 11;
+            transition: color 0.3s ease;
+            position: absolute;
+        }
+        .introduction:hover {
+            color:rgb(247, 80, 161);
+        }
+        .one{
+            position:absolute;
+            z-index:4;
+            top:0px;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .introduction {
+                font-size: 14px;
+                width: 90%;
+            }
+        }
+        .square-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px); 
+            gap: 270px; 
+        }
+        .square {
+            width: 310px;
+            height: 310px;
+            background-color: #ffe482;
+            margin-top: -150px;
+            margin-left: 350px;
+            z-index: 15;
+            transition: opacity 0.3s;
+            position: relative;
+        }
+        .square:nth-child(5) {
+            visibility: hidden;
+        }
+        .square:hover {
+            opacity: 0;
+        }
+        .middle {
+            font-size: 40px;
+            color: #f39a40;
+            position: absolute;
+            font-family: "a Avocado Taco", serif;
+            width:300px;
+            text-align: center;
+            margin-top: -70px;
+            margin-right: -60px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px); 
+            gap: 270px;
+            
+        }
+
+        .grid-container img {
+            width: 310px; 
+            height: 310px; 
+            object-fit: cover; 
+            margin-top: -150px;
+            margin-left: -490px;
+            z-index: 10;
+        }
+
+        .empty {
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">
+        <img src="background.png" alt="">
+    </div>
+    <h1>Let's Knit</h1>
+    <div class="introduction">
+        <p>“Knitting is more than just winding wool around and around, it's a superpower! With one crochet hook and a ball of wool, you can create a warm scarf, a cute hat, or even a unique little monster. The joy of knitting is that every wrong stitch is a 'design coincidence' and every new loop of yarn is an adventure.”</p>
+    </div>
+    <div class="square-container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <div class="middle">
+        <p>There are some beautiful knitted pieces here, pick one and click on it!</p>
+    </div>
+    <div class="grid-container">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+        <div class="empty"></div> <!-- 中间位置 -->
+        <img src="image5.jpg" alt="Image 5">
+        <img src="image6.jpg" alt="Image 6">
+        <img src="image7.jpg" alt="Image 7">
+        <img src="image8.jpg" alt="Image 8">
+    </div>
+    
+</body>
+</html>
