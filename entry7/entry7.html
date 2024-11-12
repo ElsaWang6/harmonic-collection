@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessie Mordine Young</title>
+    <link rel="icon" href="favicon4.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 280vh; 
+            background: linear-gradient(to bottom, #fffde7, #ffffff); 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .container {
+            position:absolute;
+            text-align: center;
+            max-width: 700px;
+            padding: 20px;
+            margin-left: 250px;
+            margin-top: 200px;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-family: "Syouwa Retro Pop";
+            color:rgb(47, 75, 134);
+        }
+
+        .content {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-family: "Syouwa Retro Pop";
+            color:#7192c9;
+        }
+        
+        .intro {
+            position:absolute;
+            font-family: "Syouwa Retro Pop";
+            font-size: 40px;
+            width:800px;
+            color:#bf406c;
+            bottom: 350px;
+            left:250px;
+        }
+
+        .image1 {
+            position:absolute;
+            width:600px;
+            left: 290px;
+            top:770px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-bottom: 20px;
+            background-color: #ffe438;
+            color: white;
+            font-family: "Syouwa Retro Pop";
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #f9b600;
+        }
+
+        .border-image {
+            position: absolute;
+            max-width: 1200px;
+            max-height: 1800px;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 370px; right: 10px; }
+        .bottom-left { bottom: 370px; left: 10px; }
+        .bottom-right { bottom: 10px; right: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Jessie Mordine Young</h1>
+
+    <p class="content">Jessie Mordine Young is a Brooklyn-based artist who researches, writes, curates, produces, and teaches textile art. She has recently begun planning a “Weaving Challenge” of daily artworks, 100 woven artworks on frame looms in 100 days. These weaving samples are linked to her experiences in nature, where color and texture become tangible references to memory, and intimacy is felt in the work. She specializes in incorporating materials such as metal, shells, dried flowers and leaves into the fibers, interspersing the structure to present a variety of textures and forms with a unique visual language.</p>
+
+    <button class="button" onclick="fadeInImages()">See more images</button>
+</div>
+<div class="intro">“Without realizing it, I find objects that make the woven work feel complete.”</div>
+
+<img src="71.jpg" alt="artist" class="image1">
+
+<!-- 周围的图片元素 -->
+<img src="72.png" class="border-image top-left" alt="up">
+<img src="74.png" class="border-image top-right" alt="right">
+<img src="75.png" class="border-image bottom-left" alt="left">
+<img src="73.png" class="border-image bottom-right" alt="down">
+
+<script>
+    // 定义一个淡入效果的函数
+    function fadeInImages() {
+        // 选择所有具有 'border-image' 类的图片
+        const images = document.querySelectorAll('.border-image');
+        // 遍历图片并逐个设置 opacity 为 1，实现淡入效果
+        images.forEach(image => {
+            image.style.opacity = '1';
+        });
+    }
+</script>
+
+</body>
+</html>

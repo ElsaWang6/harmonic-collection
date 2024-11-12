@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaci Smith</title>
+    <link rel="icon" href="favicon3.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 280vh;
+            background: linear-gradient(to bottom, rgb(195, 255, 158), white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            position: absolute;
+            color:rgb(88, 220, 0);
+            font-size: 50px;
+            left: 150px;
+            top: 150px;
+            font-family: "Marker Felt";
+            z-index: 10;
+        }
+
+        .text {
+            position:absolute;
+            color: rgb(10, 150, 0);
+            font-size: 23px;
+            font-family: "Marker Felt";
+            width: 600px;
+            top: 280px;
+            right:50px;
+
+        }
+        .text:hover {
+            color: rgb(186, 212, 38);
+        }
+        .flashing-text {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: flashing 1s infinite; 
+            position: absolute;
+            font-family: "Marker Felt";
+            top: 100px;
+            left:240px;
+            z-index: 1;
+        }
+
+        .flashing-text:hover {
+            color: rgb(132, 255, 24);
+        }
+
+        @keyframes flashing {
+        0%, 100% {
+            opacity: 0.7; 
+        }
+        50% {
+            opacity: 1;
+        }
+        }
+        .image1 {
+            position: absolute;
+            width:400px;
+            top:300px;
+            left:150px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 600px; 
+            margin: 20px auto;
+            cursor: pointer; 
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .container img {
+            width: 300px; 
+            object-fit: cover;
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+        .container img:nth-child(1) { top: 0px; left: 0px; transform: rotate(-15deg); }
+        .container img:nth-child(2) { top: 20px; left: 30px; transform: rotate(10deg); }
+        .container img:nth-child(3) { top: 40px; left: -20px; transform: rotate(5deg); }
+        .container img:nth-child(4) { top: 10px; left: 50px; transform: rotate(-10deg); }
+        .container img:nth-child(5) { top: 30px; left: -10px; transform: rotate(-5deg); }
+        .container img:nth-child(6) { top: 50px; left: 20px; transform: rotate(15deg); }
+
+        .expanded {
+            max-width: 1000px;
+            padding: 10px;
+            transform: translateY(400px);
+        }
+       
+        .expanded img {
+            position: static;
+            width: 30%;
+            height: auto;
+            transform: rotate(0); 
+            margin: 5px;
+            opacity: 1;
+        }
+        .expanded img:hover {
+            transform: scale(1.1);
+        }
+
+        .click {
+            position: absolute;
+            color:rgb(155, 244, 1);
+            font-size: 50px;
+            left: 190px;
+            top: 820px;
+            font-family: "Marker Felt";
+        }
+    </style>
+</head>
+<body>
+    <h1>Kaci Smith</h1>
+    <div class="flashing-text">Weaving rainbows in the branches.</div>
+    <div class="text">Tree branches are the natural framework for American artist Kaci Smith's miniature blankets, where colorful threads hang from the branches and are woven like brilliant rainbows blooming on a canvas of branches. The stability of the weaving combined with the fragility of the branches gives her work a unique aesthetic.
+        Smith's primary artistic endeavors are painting and collage design, and her first woven twig piece was made during the 20-year epidemic. At the time, she started knitting at home to pass the time because she couldn't get to her studio. Depending on the size of the branch or the complexity of the pattern, a piece can take several days to complete.
+        Even though knitted blankets are “painted” with yarn, they can't be rushed. The process teaches Smith to be patient and to find a particular rhythm in repetition. So the craft has been a way for her to find inner peace or meditation in addition to her main job.
+        Smith was able to find a unique outlet and vehicle for creative output when she couldn't get out during the epidemic. She uses her work to encourage positive self-expression and reminds us that creativity is not limited by time, space or resources.</div>
+    <img src="11.jpg" alt="artist" class="image1">
+    <div class="container" onclick="toggleExpand()">
+        <img src="12.jpg" alt="image2">
+        <img src="13.jpg" alt="image3">
+        <img src="14.jpg" alt="image4">
+        <img src="15.jpg" alt="image5">
+        <img src="16.jpg" alt="image6">
+        <img src="17.jpg" alt="image7">
+    </div>
+    <div class="click">Click it and see more works.</div>
+    <script>
+        function toggleExpand() {
+            document.querySelector('.container').classList.toggle('expanded');
+        }
+    </script>
+    
+</body>
+</html>

@@ -22,14 +22,13 @@
                         radial-gradient(circle at 70% 80%, rgba(0, 0, 255, 0.3), transparent 40%),
                         radial-gradient(circle at 40% 70%, rgba(255, 255, 0, 0.2), transparent 50%);
             height: 300vh;
-            max-width: 1200px;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
             position: relative;
-            overflow-x: hidden;
+
         }
 
         h1 {
@@ -67,6 +66,9 @@
             position:absolute;
             z-index:4;
             top:0px;
+            left: 0;
+            width: 100vw;
+
         }
         
         @media (max-width: 600px) {
@@ -116,7 +118,7 @@
             grid-template-columns: repeat(3, 100px);
             grid-template-rows: repeat(3, 100px); 
             gap: 270px;
-            
+            cursor: pointer;
         }
 
         .grid-container img {
@@ -144,9 +146,15 @@
         <p>“Knitting is more than just winding wool around and around, it's a superpower! With one crochet hook and a ball of wool, you can create a warm scarf, a cute hat, or even a unique little monster. The joy of knitting is that every wrong stitch is a 'design coincidence' and every new loop of yarn is an adventure.”</p>
     </div>
     <div class="square-container">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <a href="../entry6/entry6.html">
+            <div class="square"></div>
+        </a>
+        <a href="../newentry1/newentry1.html">
+            <div class="square"></div>
+        </a>
+        <a href="../entry7/entry7.html">
+            <div class="square"></div>
+        </a>
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
