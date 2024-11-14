@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elise Peroi</title>
+    <link rel="icon" href="favicon6.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, rgb(243, 254, 216), white);
+            min-height: 250vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 1200px;
+            height: 200px;
+            background: url('81.jpg') no-repeat center center;
+            background-size: cover;
+            margin-top: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .left-image {
+            width: 600px;
+            height: 650px;
+            background: url('82.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .text-content {
+            width: 55%;
+            padding-left: 20px;
+            font-size: 21px;
+            font-family: "Chalkboard";
+            color: rgb(134, 0, 60);
+        }
+
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .button.green { background-color: rgb(191, 217, 159); }
+        .button.yellow { background-color: rgb(220, 220, 145); }
+        .button.white { background-color: rgb(204, 204, 204); }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 1100px;
+            justify-content: center;
+        }
+
+
+        .image-box {
+            width: 250px;
+            height: 300px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            perspective: 1000px;
+            margin-bottom: 10px;
+        }
+
+        .image-box-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+
+        .image-box-inner img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            opacity: 0; 
+            border-radius: 10px;
+            transition: opacity 0.6s; 
+            z-index: 9;
+        }
+
+        .image-box-inner .front {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: gray;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .image-box-inner.flipped {
+            transform: rotateY(360deg);
+        }
+        .image-box-inner.flipped .front {
+            opacity: 0; 
+        }
+
+        .image-box-inner.flipped img {
+            opacity: 1 !important;
+            z-index: 9 !important;
+        }
+    </style>
+</head>
+<body>
+  <div class="header-image"></div>
+
+  <div class="content">
+    <div class="left-image"></div>
+
+    <div class="text-content">
+      <div class="title">Elise Peroi</div>
+      <p>Elise grew up in France and then moved to Brussels to study at the Royal Academy of Fine Arts, where she received an MA in Textile Design in 2015. Her work has been included in solo exhibitions organized by the Museum of Fashion and Lace in Brussels.In 2016, with the support of Halles de Schaerbeek, she developed a textile performance based on weaving. She has collaborated with the Chinese dancer Mei Zhuoyan and performed in Brussels and Hong Kong.</p>
+      <p>Weaving is the slow art of weaving through the warp threads by means of a shuttle, assembling the piece section by section.Elise first paints on the silk, then cuts it into thin ribbons and weaves it back. As the silk vibrates and the loom churns, the artist experiences a spiritual and sensory journey. The woven pieces are created in the simplest form of dance to the music of repeating sounds. This duo dance of communion with materials is also presented through performance: Elise reuses gestures, incorporates twigs and marbles into the threads, intertwines herself in them, and performs nameless rituals, allowing seeds and soil to evoke the primal cycle of endless new beginnings. In this way she expands the tangible reality of weaving.</p>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="button green" onclick="flipImage(0)"></button>
+    <button class="button yellow" onclick="flipImage(1)"></button>
+    <button class="button white" onclick="flipImage(2)"></button>
+    <button class="button green" onclick="flipImage(3)"></button>
+    <button class="button yellow" onclick="flipImage(4)"></button>
+    <button class="button white" onclick="flipImage(5)"></button>
+    <button class="button green" onclick="flipImage(6)"></button>
+    <button class="button yellow" onclick="flipImage(7)"></button>
+  </div>
+
+<div class="image-grid">
+    <div class="image-box">
+        <div class="image-box-inner">
+            <div class="front">Click on the circle above and flip me.</div>
+            <img src="83.jpg" alt="Image 1">
+        </div>
+    </div>
+    <div class="image-box">
+      <div class="image-box-inner">
+        <div class="front"> Flip me.</div>
+        <img src="84.jpg" alt="Image 2">
+      </div>
+    </div>
+    <div class="image-box">
+        <div class="image-box-inner">
+          <div class="front">Flip me.</div>
+          <img src="85.jpg" alt="Image 3">
+        </div>
+      </div>
+    <div class="image-box">
+        <div class="image-box-inner">
+          <div class="front">Flip me.</div>
+          <img src="86.jpg" alt="Image 4">
+        </div>
+    </div>
+    <div class="image-box">
+        <div class="image-box-inner">
+          <div class="front">Flip me.</div>
+          <img src="87.jpg" alt="Image 5">
+        </div>
+    </div>
+    <div class="image-box">
+        <div class="image-box-inner">
+          <div class="front">Flip me.</div>
+          <img src="88.jpg" alt="Image 6">
+        </div>
+    </div>
+    <div class="image-box">
+        <div class="image-box-inner">
+          <div class="front">Flip me.</div>
+          <img src="89.jpg" alt="Image 7">
+        </div>
+    </div>
+    <div class="image-box">
+        <div class="image-box-inner">
+          <div class="front">Flip me.</div>
+          <img src="810.jpg" alt="Image 8">
+        </div>
+    </div>
+</div>
+
+<script>
+    function flipImage(index) {
+  const imageBoxes = document.querySelectorAll('.image-box-inner');
+  if (imageBoxes[index]) {
+    imageBoxes[index].classList.toggle('flipped');
+  }
+}
+</script>
+</body>
+</html>

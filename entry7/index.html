@@ -107,18 +107,14 @@
 
 <img src="71.jpg" alt="artist" class="image1">
 
-<!-- 周围的图片元素 -->
 <img src="72.png" class="border-image top-left" alt="up">
 <img src="74.png" class="border-image top-right" alt="right">
 <img src="75.png" class="border-image bottom-left" alt="left">
 <img src="73.png" class="border-image bottom-right" alt="down">
 
 <script>
-    // 定义一个淡入效果的函数
     function fadeInImages() {
-        // 选择所有具有 'border-image' 类的图片
         const images = document.querySelectorAll('.border-image');
-        // 遍历图片并逐个设置 opacity 为 1，实现淡入效果
         images.forEach(image => {
             image.style.opacity = '1';
         });

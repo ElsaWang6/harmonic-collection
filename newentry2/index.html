@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoko FUKUDA</title>
+    <link rel="icon" href="favicon5.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #dbfbff, #ffffff); 
+            color: #333;
+            height: 250vh; 
+        }
+
+        .scroll-banner {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 150px;
+        }
+
+        .scroll-banner-inner {
+            display: flex;
+            width: 200%;
+            animation: scroll-right 20s linear infinite;
+        }
+
+        .scroll-banner-inner img {
+            width: 50%; 
+            height: 100%;
+        }
+
+        .scroll-banner-bottom {
+            margin-top: 280px; 
+            height: 150px; 
+        }
+
+        @keyframes scroll-right {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 50px;
+            color: #333;
+            font-family: "Apple Chancery";
+            color: rgb(0, 55, 110);
+        }
+
+        p {
+            font-size: 25px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+            text-align: justify;
+            font-family: "Apple Chancery";
+            color: rgb(0, 33, 94);
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .image-row img {
+            width: 24%; 
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-row img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-banner">
+        <div class="scroll-banner-inner">
+            <img src="26.png" alt="topimage">
+            <img src="26.png" alt="topimage">
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Shoko FUKUDA</h1>
+        
+        <p>Shoko FUKUDA is a Japanese artist born in 1977 in Hyogo Prefecture, Japan. She graduated from Waseda University in 1999, and then enrolled in the Master's Degree Program at Osaka University of the Arts, majoring in dyeing and weaving, and also began to study basket weaving, and has been a lecturer at Kobe University of the Arts since 2012, and is active as an artist worldwide.</p>
+
+        <div class="image-row">
+            <img src="22.jpg" alt="image1">
+            <img src="23.jpg" alt="image2">
+            <img src="24.jpg" alt="image3">
+            <img src="29.jpg" alt="image4">
+        </div>
+
+        <p>Artist Yuko Fukuda draws inspiration from traditional weaving, using materials such as twine, cotton thread, nylon thread, resin, etc. Through different weaving techniques and strengths, she twists, rotates and deforms the wires to create sculptures and artifacts with spiral structures and twisted shapes, thus exploring the boundaries and possibilities of weaving, which can be used as soft sculptures, accessories, or household utensils to unify the beauty of weaving art and decorate the lives of those who appreciate it. The woven works can be used as soft sculptures, accessories, or household objects, unifying the beauty of the art of weaving while decorating the lives of those who appreciate it.</p>
+
+        <div class="image-row">
+            <img src="21.jpg" alt="image5">
+            <img src="25.jpg" alt="image6">
+            <img src="27.jpg" alt="image7">
+            <img src="28.jpg" alt="image8">
+        </div>
+    </div>
+
+    <div class="scroll-banner scroll-banner-bottom">
+        <div class="scroll-banner-inner">
+            <img src="26.png" alt="bottomimage">
+            <img src="26.png" alt="bottomimage">
+        </div>
+    </div>
+
+</body>
+</html>
