@@ -91,7 +91,7 @@
             width: 310px;
             height: 310px;
             background-color: #ffe482;
-            margin-top: -150px;
+            margin-top: -50px;
             margin-left: 350px;
             z-index: 15;
             transition: opacity 0.3s;
@@ -110,7 +110,7 @@
             font-family: "a Avocado Taco", serif;
             width:300px;
             text-align: center;
-            margin-top: -70px;
+            margin-bottom: -90px;
             margin-right: -60px;
         }
         .grid-container {
@@ -125,7 +125,7 @@
             width: 310px; 
             height: 310px; 
             object-fit: cover; 
-            margin-top: -150px;
+            margin-top: -50px;
             margin-left: -490px;
             z-index: 10;
         }
@@ -133,7 +133,35 @@
         .empty {
             background-color: transparent;
         }
-       
+        .rectangle-container {
+            position: absolute;
+            display: flex; 
+            gap: 50px;
+            top: 470px;
+            left: 150px; 
+            z-index: 20;
+        }
+        .rectangle {
+            width: 300px;
+            height: 120px;
+            background-color: #9aebff; 
+            color: #fff;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            border-radius: 5px;
+            font-size: 1.5em;
+            text-align: center;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            font-family: "Dimsum Week", serif;
+        }
+        .rectangle:hover {
+            background-color: #a674db; 
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+        }
 
     </style>
 </head>
@@ -179,6 +207,12 @@
         <img src="image6.jpg" alt="Image 6">
         <img src="image7.jpg" alt="Image 7">
         <img src="image8.jpg" alt="Image 8">
+    </div>
+    <div class="rectangle-container">
+        <a href="./entry3/index.html">
+            <div class="rectangle">History of Knitting</div>
+        </a>
+        <div class="rectangle">Intangible Cultural Heritage of China--Bamboo Weaving</div>
     </div>
     
 </body>

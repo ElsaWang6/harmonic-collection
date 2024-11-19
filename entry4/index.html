@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国竹编</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* 背景图片设置 */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('your-image.jpg'); /* 替换为你自己的背景图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        /* 标题样式 */
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            z-index: 1;
+        }
+
+        /* 第一组四个竖着的长图 */
+        .long-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .long-images img {
+            width: 23%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* 图片上的文字 */
+        .long-images div {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* 小标题 */
+        .subtitle {
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 第二组四个正方形图 */
+        .square-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .square-images img {
+            width: 23%;
+            height: 0;
+            padding-bottom: 23%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* 第三组九张图 */
+        .random-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .random-images img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="title">中国竹编</div>
+
+    <!-- 第一组长图 -->
+    <div class="long-images">
+        <div><img src="your-image1.jpg" alt="Image 1"><div>描述文字 1</div></div>
+        <div><img src="your-image2.jpg" alt="Image 2"><div>描述文字 2</div></div>
+        <div><img src="your-image3.jpg" alt="Image 3"><div>描述文字 3</div></div>
+        <div><img src="your-image4.jpg" alt="Image 4"><div>描述文字 4</div></div>
+    </div>
+
+    <!-- 第二组小标题 + 正方形图 -->
+    <div class="subtitle">小标题 1</div>
+    <div class="square-images">
+        <img src="your-image5.jpg" alt="Image 5">
+        <img src="your-image6.jpg" alt="Image 6">
+        <img src="your-image7.jpg" alt="Image 7">
+        <img src="your-image8.jpg" alt="Image 8">
+    </div>
+
+    <!-- 第三组小标题 + 随意排列的图片 -->
+    <div class="subtitle">小标题 2</div>
+    <div class="random-images">
+        <img src="31.jpg" alt="Image 9">
+        <img src="32.jpg" alt="Image 10">
+        <img src="33.jpg" alt="Image 11">
+        <img src="34.jpg" alt="Image 12">
+        <img src="35.jpg" alt="Image 13">
+        <img src="your-image14.jpg" alt="Image 14">
+        <img src="your-image15.jpg" alt="Image 15">
+        <img src="your-image16.jpg" alt="Image 16">
+        <img src="your-image17.jpg" alt="Image 17">
+    </div>
+</body>
+</html>
