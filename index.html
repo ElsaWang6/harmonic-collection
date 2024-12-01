@@ -21,14 +21,13 @@
             background: radial-gradient(circle at 20% 30%, rgba(255, 255, 0, 0.3), transparent 30%),
                         radial-gradient(circle at 70% 80%, rgba(0, 0, 255, 0.3), transparent 40%),
                         radial-gradient(circle at 40% 70%, rgba(255, 255, 0, 0.2), transparent 50%);
-            height: 300vh;
+            height: 250vh;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
             position: relative;
-
         }
 
         h1 {
@@ -47,7 +46,7 @@
             color: #ff5733;
         }
         .introduction {
-            margin-top: -1600px;
+            top: 10%;
             margin-right:100px;
             margin-bottom: 20px;
             font-size: 20px;
@@ -56,19 +55,15 @@
             line-height: 1.6;
             font-family: "Dimsum Week", serif;
             z-index: 11;
-            transition: color 0.3s ease;
             position: absolute;
         }
-        .introduction:hover {
-            color:rgb(247, 80, 161);
-        }
+
         .one{
             position:absolute;
             z-index:4;
             top:0px;
             left: 0;
             width: 100vw;
-
         }
         
         @media (max-width: 600px) {
@@ -91,17 +86,19 @@
             width: 310px;
             height: 310px;
             background-color: #ffe482;
-            margin-top: -50px;
+            top: 70%;
             margin-left: 350px;
-            z-index: 15;
+            z-index: 25;
             transition: opacity 0.3s;
             position: relative;
+            cursor: pointer;
         }
         .square:nth-child(5) {
             visibility: hidden;
         }
         .square:hover {
             opacity: 0;
+            pointer-events: auto;
         }
         .middle {
             font-size: 40px;
@@ -110,7 +107,7 @@
             font-family: "a Avocado Taco", serif;
             width:300px;
             text-align: center;
-            margin-bottom: -90px;
+            margin-bottom: -350px;
             margin-right: -60px;
         }
         .grid-container {
@@ -118,14 +115,13 @@
             grid-template-columns: repeat(3, 100px);
             grid-template-rows: repeat(3, 100px); 
             gap: 270px;
-            cursor: pointer;
         }
 
         .grid-container img {
             width: 310px; 
             height: 310px; 
             object-fit: cover; 
-            margin-top: -50px;
+            margin-top: 70px;
             margin-left: -490px;
             z-index: 10;
         }
@@ -133,14 +129,16 @@
         .empty {
             background-color: transparent;
         }
+        
         .rectangle-container {
+            margin: 0;
             position: absolute;
-            display: flex; 
-            gap: 50px;
-            top: 470px;
-            left: 150px; 
-            z-index: 20;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            gap: 10%; /* 用百分比设置间距，适配宽度 */
+            top:23%;
         }
+
         .rectangle {
             width: 300px;
             height: 120px;
@@ -154,13 +152,16 @@
             text-align: center;
             transition: background-color 0.5s ease, color 0.5s ease;
             font-family: "Dimsum Week", serif;
+            z-index: 20;
         }
+            
         .rectangle:hover {
             background-color: #a674db; 
             color: #fff;
         }
         a {
             text-decoration: none;
+            cursor: pointer;
         }
 
     </style>
@@ -169,10 +170,16 @@
     <div class="one">
         <img src="background.png" alt="">
     </div>
-    <h1>Let's Knit</h1>
+     <h1>Let's Knit</h1>
     <div class="introduction">
         <p>“Knitting is more than just winding wool around and around, it's a superpower! With one crochet hook and a ball of wool, you can create a warm scarf, a cute hat, or even a unique little monster. The joy of knitting is that every wrong stitch is a 'design coincidence' and every new loop of yarn is an adventure.”</p>
     </div>
+    
+    <div class="rectangle-container">
+        <a href="./entry3/index.html" class="rectangle">History of Knitting</a>
+        <a href="./entry4/index.html" class="rectangle">Intangible Cultural Heritage of China--Bamboo Weaving</a>
+    </div>
+    
     <div class="square-container">
         <a href="./entry6/index.html">
             <div class="square"></div>
@@ -193,7 +200,9 @@
         <a href="./entry5/index.html">
             <div class="square"></div>
         </a>
-        <div class="square"></div>
+        <a href="./entry9/index.html">
+            <div class="square"></div>
+        </a>
         <div class="square"></div>
     </div>
     <div class="middle">
@@ -209,14 +218,6 @@
         <img src="image6.jpg" alt="Image 6">
         <img src="image7.jpg" alt="Image 7">
         <img src="image8.jpg" alt="Image 8">
-    </div>
-    <div class="rectangle-container">
-        <a href="./entry3/index.html">
-            <div class="rectangle">History of Knitting</div>
-        </a>
-        <a href="./entry4/index.html">
-            <div class="rectangle">Intangible Cultural Heritage of China--Bamboo Weaving</div>
-        </a>
     </div>
     
 </body>
