@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rania Hassan</title>
+    <link rel="icon" href="favicon10.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #cae5ff, #ffffff);
+            color: #7f5200;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+            font-family: "Chalkduster";
+            transition: transform 0.3s ease;
+        }
+        
+        h2 {
+            font-size: 2.3em;
+            margin-top: 20px;
+            font-family: "Canela Text";
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px auto;
+            width: 80%;
+            line-height: 1.6;
+            font-family: "Canela Text";
+            color:rgb(162, 135, 0);
+        }
+        .images-row {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .images-row img {
+            width: 45%;
+            margin: 0 2.5%;
+            border-radius: 10px;
+        }
+        .carousel {
+            position: relative;
+            width: 50%;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-images img {
+            min-width: 100%;
+            max-height: 700px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>“From a single thread, we will all be connected.”</h1>
+    <h2>Rania Hassan</h2>
+    <p>Rania Hassan is an American composite media artist. She works in site-specific installations that use weaving to translate our connections to time, place and environment into tangible sculptural presentations. The core of her work centers around five main themes: community, commensurability, identity, time and memory.</p>
+
+    <div class="images-row">
+        <img src="101.jpg" alt="image1">
+        <img src="102.jpg" alt="image2">
+    </div>
+
+    <p>Born into a Lebanese family with a strong tradition of handicrafts, Rania Hassan started out as an oil painter, but by chance she combined painting with a childhood memory (knitting) to create her current way of working.</p>
+    <p>Our memories are subtly altered each time they are brought back. But looking back, we can see things more clearly. Rania Hassan is a seamstress who puts these memory fragments back together.</p>
+    <p>Each of our memories, our experiences, are so interconnected and overlapping that sometimes we only remember the beginning and the end of an event, leaving the in-between process feeling as hazy as a cloud. And she weaves them together again, over and over again, as a way of demonstrating that memories are not isolated, that they exist because the past and present are indelibly intertwined and participate in their eternal cycle of creation, deconstruction and regeneration.</p>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="103.jpg" alt="image3">
+            <img src="104.jpg" alt="image4">
+            <img src="105.jpg" alt="image5">
+            <img src="106.jpg" alt="image6">
+            <img src="107.jpg" alt="image7">
+            <img src="108.jpg" alt="image8">
+            <img src="109.jpg" alt="image9">
+        </div>
+        <div class="carousel-controls">
+            <button id="prev">←</button>
+            <button id="next">→</button>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function updateCarousel() {
+            const offset = -index * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+            images.forEach((img, i) => {
+                if (i === index) {
+                    img.style.transform = 'scale(1)';
+                    img.style.opacity = '1';
+                } else {
+                    img.style.transform = 'scale(0.8)';
+                    img.style.opacity = '0.5';
+                }
+            });
+        }
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        updateCarousel();
+    </script>
+</body>
+</html>
